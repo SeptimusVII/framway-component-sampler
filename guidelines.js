@@ -17,12 +17,12 @@ Guidelines.prototype.onCreate = function(){
 	var content = '';
 	for(var item in arrSections){
 		nav += '<button data-lvl1="'+utils.normalize(item)+'" class="btn-sm btn-bg-secondary">'+ utils.capitalize(item) +'</button> ';
-		content += '<div class="tab">'+getContent(item,arrSections[item])+'</div>'
+		content += '<div class="tab block-std">'+getContent(item,arrSections[item])+'</div>'
 	}
 	guidelines.$body = $(require('mustache-loader!html-loader?interpolate!./templates/index.html')({
 		nav: nav,
 		content: content
-	})).addClass('block-std lvl1');
+	})).addClass('lvl1');
 
 	guidelines.$el.html(guidelines.$body);
 	guidelines.$body.find('.tabs__nav button').on('click',function(){
