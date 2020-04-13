@@ -5,6 +5,7 @@ Guidelines.lastUpdate     = "2.0.0";
 Guidelines.version        = "1";
 Guidelines.factoryExclude = true;
 Guidelines.loadingMsg     = (!app.components.includes('tabs')?"This component require the following components to work properly: \n - tabs":null);
+Guidelines.requires	      = ['tabs'];
 
 var arrSections = {
 	'texts' : {'default' : 'texts', 'backgrounded' : 'texts_bg', 'bordered' : 'texts_bd'},
