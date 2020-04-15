@@ -18,7 +18,7 @@ var Guidelines = module.exports = function(app){
 		var nav = '';
 		var content = '';
 		for(var item in arrSections){
-			nav += '<button data-lvl1="'+utils.normalize(item)+'" class="btn-sm btn-bg-secondary">'+ utils.capitalize(item) +'</button> ';
+			nav += '<button data-lvl1="'+app.utils.normalize(item)+'" class="btn-sm btn-bg-secondary">'+ app.utils.capitalize(item) +'</button> ';
 			content += '<div class="tab block-std">'+getContent(item,arrSections[item])+'</div>'
 		}
 		guidelines.$body = $(require('mustache-loader!html-loader?interpolate!./templates/index.html')({
@@ -44,7 +44,7 @@ var Guidelines = module.exports = function(app){
 		var nav = '';
 		var content = '';
 		for(var item in config){
-			nav += '<button data-lvl2="'+utils.normalize(section)+'-'+utils.normalize(item)+'" class="btn-sm btn-bd-secondary">'+ utils.capitalize(item) +'</button> ';
+			nav += '<button data-lvl2="'+app.utils.normalize(section)+'-'+app.utils.normalize(item)+'" class="btn-sm btn-bd-secondary">'+ app.utils.capitalize(item) +'</button> ';
 			if (item != 'backgrounded' && item != 'bordered')
 				content += '<div class="tab p-all">'+require('mustache-loader!html-loader?interpolate!./templates/section_'+config[item]+'.html')()+'</div>';
 			else{
