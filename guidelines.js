@@ -1,5 +1,5 @@
-var Guidelines = module.exports = function(app){
-	Guidelines = Object.getPrototypeOf(app).Guidelines = new app.Component("guidelines");
+module.exports = function(app){
+	var Guidelines = Object.getPrototypeOf(app).Guidelines = new app.Component("guidelines");
 	// Guidelines.debug = true;
 	Guidelines.createdAt      = "2.0.0";
 	Guidelines.lastUpdate     = "2.0.0";
