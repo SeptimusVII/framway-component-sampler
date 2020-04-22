@@ -27,9 +27,11 @@ module.exports = function(app){
 		})).addClass('lvl1');
 
 		guidelines.$el.html(guidelines.$body);
-		guidelines.$body.find('.tabs__nav button').on('click',function(){
-			setTimeout(function(){app.updateUrlNavigation(guidelines.getNavState());})
-		});
+		if (typeof app.updateUrlNavigation != 'undefined') {
+			guidelines.$body.find('.tabs__nav button').on('click',function(){
+				setTimeout(function(){app.updateUrlNavigation(guidelines.getNavState());})
+			});
+		}
 	}
 	Guidelines.prototype.getNavState = function(){
 		var guidelines = this;
