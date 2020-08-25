@@ -11,6 +11,10 @@ module.exports = function(app){
 	var arrSections = {
 		'texts' : {'default' : 'texts', 'backgrounded' : 'texts_bg', 'bordered' : 'texts_bd'},
 		'titles' : {'default' : 'titles', 'backgrounded' : 'titles_bg', 'With separators': 'titles_sep'},
+		'buttons' : {'default' : 'buttons', 'colored' : 'buttons_colors'},
+		'inputs' : {'Type text' : 'inputs','Type text extra' : 'inputs_texts','Other types' : 'inputs_others','backgrounded' : 'inputs_bg'},
+		'backgrounds' : {'backgrounded' : 'backgrounds'},
+		'borders' : {'default' : 'borders', 'colored' : 'borders_colors'},
 	};
 	Guidelines.prototype.onCreate = function(){
 		var guidelines = this;
@@ -47,7 +51,7 @@ module.exports = function(app){
 		var content = '';
 		for(var item in config){
 			nav += '<button data-lvl2="'+app.utils.normalize(section)+'-'+app.utils.normalize(item)+'" class="btn-sm btn-bd-secondary">'+ app.utils.capitalize(item) +'</button> ';
-			if (item != 'backgrounded' && item != 'bordered')
+			if (item != 'backgrounded' && item != 'bordered' && item != 'colored' && item != 'backgrounds')
 				content += '<div class="tab p-all">'+require('mustache-loader!html-loader?interpolate!./templates/section_'+config[item]+'.html')()+'</div>';
 			else{
 				content += '<div class="tab p-all">';

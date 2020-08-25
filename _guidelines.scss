@@ -3,4 +3,6 @@
 		&:before{content: '[';}
 		&:after{content: ']';}
 	}
+
+	.tabs .tabs__nav button:first-child:last-child{display: none;}
 }
