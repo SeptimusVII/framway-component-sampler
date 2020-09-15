@@ -9,6 +9,7 @@ module.exports = function(app){
 	Guidelines.requires	      = ['tabs'];
 
 	var arrSections = {
+		'Sample page' : {'Sample page' : 'samplepage'},
 		'texts' : {'default' : 'texts', 'backgrounded' : 'texts_bg', 'bordered' : 'texts_bd'},
 		'titles' : {'default' : 'titles', 'backgrounded' : 'titles_bg', 'With separators': 'titles_sep'},
 		'buttons' : {'default' : 'buttons', 'colored' : 'buttons_colors'},
