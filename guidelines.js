@@ -12,7 +12,7 @@ module.exports = function(app){
 		'Sample page' : {'Sample page' : 'samplepage'},
 		'texts' : {'default' : 'texts', 'backgrounded' : 'texts_bg', 'bordered' : 'texts_bd'},
 		'titles' : {'default' : 'titles', 'backgrounded' : 'titles_bg', 'With separators': 'titles_sep'},
-		'buttons' : {'default' : 'buttons', 'colored' : 'buttons_colors', 'With icons': 'buttons_icons'},
+		'buttons' : {'default' : 'buttons', 'colored' : 'buttons_colors', 'extras': 'buttons_extras'},
 		'inputs' : {'Type text' : 'inputs','Type text extra' : 'inputs_texts','Other types' : 'inputs_others','backgrounded' : 'inputs_bg'},
 		'backgrounds' : {'backgrounded' : 'backgrounds'},
 		'borders' : {'default' : 'borders', 'colored' : 'borders_colors'},
