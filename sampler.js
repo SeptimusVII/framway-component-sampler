@@ -34,7 +34,8 @@ module.exports = function(app){
         sampler.$el.html(sampler.$body);
         if (typeof app.updateUrlNavigation != 'undefined') {
             sampler.$body.find('.tabs__nav button').on('click',function(){
-                setTimeout(function(){app.updateUrlNavigation(sampler.getNavState());})
+                if (sampler.$el.parent('.tab').hasClass('active'))
+                    setTimeout(function(){app.updateUrlNavigation(sampler.getNavState());})
             });
         }
     }
