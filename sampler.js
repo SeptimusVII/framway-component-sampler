@@ -2,8 +2,8 @@ module.exports = function(app){
     var Sampler = Object.getPrototypeOf(app).Sampler = new app.Component("sampler");
     // Sampler.debug = true;
     Sampler.createdAt      = "2.0.0";
-    Sampler.lastUpdate     = "2.0.0";
-    Sampler.version        = "1";
+    Sampler.lastUpdate     = "2.4.5";
+    Sampler.version        = "1.0.1";
     Sampler.factoryExclude = true;
     Sampler.loadingMsg     = (!app.components.includes('tabs')?"This component require the following components to work properly: \n - tabs":null);
     Sampler.requires       = ['tabs'];
